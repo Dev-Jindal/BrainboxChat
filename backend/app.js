@@ -11,7 +11,11 @@ connect();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://brainbox-chat.vercel.app',
+  credentials: true
+}));
+
 app.use((req, res, next) => {
   res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
   res.setHeader('Cross-Origin-Opener-Policy', 'same-origin');
