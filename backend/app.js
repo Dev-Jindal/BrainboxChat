@@ -12,7 +12,7 @@ connect();
 const app = express();
 
 app.use(cors({
-  origin: 'https://brainbox-chat.vercel.app',
+  origin: 'https://brainbox-chat-94explx0l-dev-jindals-projects.vercel.app/login',
   credentials: true
 }));
 
