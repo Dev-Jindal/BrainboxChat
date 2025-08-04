@@ -27,6 +27,7 @@ const Home = () => {
     }
 
     useEffect(() => {
+        if(!user)return;
         axios.get('/projects/all').then((res) => {
             setProject(res.data.projects)
 
@@ -34,7 +35,7 @@ const Home = () => {
             console.log(err)
         })
 
-    }, [])
+    }, [user])
 
     return (
         <main className='p-4'>
